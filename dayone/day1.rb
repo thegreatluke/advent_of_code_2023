@@ -1,20 +1,20 @@
 #!/usr/bin/env ruby
 
 words = {
-  "eightwo"   => "82",
-  "twone"     => "21",
-  "oneight"   => "18",
-  "nineeight" => "98",
+  "eightwo"         => "82",
+  "twone"           => "21",
+  "oneight"         => "18",
+  "nineeight"       => "98",
   "fivenineeightwo" => "5982",
-  "one"       => "1",
-  "two"       => "2",
-  "three"     => "3",
-  "four"      => "4",
-  "five"      => "5",
-  "six"       => "6",
-  "seven"     => "7",
-  "eight"     => "8",
-  "nine"      => "9",
+  "one"             => "1",
+  "two"             => "2",
+  "three"           => "3",
+  "four"            => "4",
+  "five"            => "5",
+  "six"             => "6",
+  "seven"           => "7",
+  "eight"           => "8",
+  "nine"            => "9",
 }
 
 lines = File.readlines("cords.txt")
