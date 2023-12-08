@@ -29,6 +29,6 @@ lines.each do |line|
   #puts nums
   cords = nums.split(//)
   sum   = "#{cords.first}#{cords.last}".to_i + sum
-  puts "#{cords.first}#{cords.last}".to_i
+  #puts "#{cords.first}#{cords.last}".to_i
 end
 puts "The total is: #{sum}"
