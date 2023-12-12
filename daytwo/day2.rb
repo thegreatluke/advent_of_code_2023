@@ -1,26 +1,34 @@
 #!/usr/bin/env ruby
 
 cubes = {
-	"red"   => "12",
-	"green" => "13",
-	"blue"  => "14",
+	"red"   => 12,
+	"green" => 13,
+	"blue"  => 14,
 }
 
-games = File.readlines('test_games.txt')
-games.each do |game|
-	game_id = game.match(/\d/)
-	game_set = game.gsub(/Game \d:/, "")
-	game_sets = game_set.split(/;/)
+def valid_game?(game, cubes)
+	cube_count = {
+		"red"   => 0,
+		"green" => 0,
+		"blue"  => 0,
+	}
+	puts game
+	# game.each do |set|
+	# 	set.scan(/(\d+) (\w+)/).each do |count, color|
+	# 		cube_count[color] += count.to_i
+	# 	end
+	# end
+	# cube_count == cubes
+end
 
-	#puts game_id
-	puts "Game: #{game_id}"
-	#puts game_set
-	#puts game_sets
-	game_sets.each do |set|
-		pull = set.split(/,/).to_s
-		puts pull
-		num = pull.gsub(/\D+/, " ")
-		puts num
-		color = pull.match(/\d /)
+games = File.readlines('test_games.txt').map(&:chomp)
+## Gets game number in arrary
+games_arrary = games.to_s.scan(/Game (.)/)
+
+#each game as set
+games.each do |game|
+  game.scan(/: (.*.)/).to_s.split(/; /).each do |set|
+    p set.scan(/ (.*.)/)
   end
 end
+
